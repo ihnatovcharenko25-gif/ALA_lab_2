@@ -15,15 +15,11 @@ n = A.shape[0]
 eigenvalues, eigenvectors = np.linalg.eig(A)
 eigenvalues = eigenvalues.real
 eigenvectors = eigenvectors.real
-'''eigenvectors_adjusted = eigenvectors
-for i in range (0, n):
-    for j in range (0, n):
-        eigenvectors_adjusted[i][j] *= eigenvalues[j]'''
+
 
 print("Matrix A: \n", A.round(4), "")
 print("Eigenvalues: ", eigenvalues.round(4))
 print("Eigenvectors (columns): \n", eigenvectors.round(4))
-#print("Eigenvectors adjusted by eigenvalues (columns): \n", eigenvectors_adjusted)
 
 for i in range(n):
     print(f"\nEigenvalue {i+1}: {eigenvalues[i].round(4)}")
